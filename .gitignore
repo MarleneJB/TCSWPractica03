@@ -1,6 +1,12 @@
 # Compiled class file
 *.class
 
+# Maven / Gradle build folders
+target/
+build/
+out/
+
+
 # Log file
 *.log
 
