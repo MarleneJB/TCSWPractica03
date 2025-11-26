@@ -25,7 +25,7 @@ public class TCSWPractica03 {
                 vista.setVisible(true);
                 
             } catch (Exception e) {
-                Logger.getLogger(TCSWPractica04.class.getName()).log(Level.INFO, "Error al iniciar la aplicacion", e);
+                Logger.getLogger(TCSWPractica03.class.getName()).log(Level.INFO, "Error al iniciar la aplicacion", e);
                 
             }
         });

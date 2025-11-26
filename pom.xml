@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>org.uv.tcswpractica04.TCSWPractica04</exec.mainClass>
+        <exec.mainClass>org.uv.tcswpractica03.TCSWPractica03</exec.mainClass>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
