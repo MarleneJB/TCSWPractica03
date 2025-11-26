@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
  *
  * @author meli
  */
-public class TCSWPractica04 {
+public class TCSWPractica03 {
 
     public static void main(String[] args) {
         // Ejecutar la aplicación en el hilo de eventos de Swing
