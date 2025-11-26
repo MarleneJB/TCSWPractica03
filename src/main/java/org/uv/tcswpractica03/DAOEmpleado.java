@@ -5,9 +5,12 @@
 package org.uv.tcswpractica03;
 
 import java.util.List;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.Criteria;
+
 
 /**
  *
@@ -82,17 +85,23 @@ public class DAOEmpleado implements IDAOGeneral<Empleados, Long> {
         }
     }
     
-    @Override
-    public List<Empleados> findAll() {
-        Session session = HibernateUtils.getSession();
-        try {
-            // Usando Criteria para obtener todos los empleados
-            Criteria criteria = session.createCriteria(Empleados.class);
-            List<Empleados> empleados = criteria.list();
-            return empleados;
-        } finally {
-            session.close();
-        }
+   @Override
+public List<Empleados> findAll() {
+    Session session = HibernateUtils.getSession();
+    try {
+
+        //  reemplazo del createCriteria()
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Empleados> query = builder.createQuery(Empleados.class);
+        Root<Empleados> empleados = query.from(Empleados.class);
+        query.select(empleados);
+
+        return session.createQuery(query).getResultList();
+
+    } finally {
+        session.close();
     }
+}
+
     
 }
